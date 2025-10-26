@@ -1,0 +1,7 @@
+.block>img{
+    width: 300px;
+}
+.block{
+    background-color: rgb(32, 55, 22);
+    padding: 10px 8px 10px 8px;
+}

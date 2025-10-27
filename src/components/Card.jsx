@@ -1,7 +1,7 @@
 import { get } from "http";
 import { useEffect, useState } from "react";
 import "../styles/Card.css";
-export default function Card({url}){
+export default function Card({url,onClick}){
     const [wowObj,setWowObj]=useState("");
     const urlKey = url;
     const fetchUrl = `https://api.giphy.com/v1/gifs/${urlKey}?api_key=hiwceFnwYRL9041M3QiLIACGRJccvlNO&rating=g`
@@ -41,9 +41,9 @@ useEffect(() => {
 }, []);
 
     return (
-        <div className="block">
+        <div className="block" key={url}>
             {
-        wowObj!="" &&<img src={wowObj.data.images.original.url} alt="warlock" />}
+        wowObj!="" &&<img src={wowObj.data.images.original.url} alt="warlock" onClick={onClick} />}
         <p>
             {
             wowObj!=""&& wowObj.data.title

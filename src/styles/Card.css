@@ -4,4 +4,12 @@
 .block{
     background-color: rgb(32, 55, 22);
     padding: 10px 8px 10px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 1s transform;
+}
+.block:hover{
+transform: scale(1.1);
 }

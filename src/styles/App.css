@@ -1,6 +1,18 @@
 #root {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
   text-align: center;
+}
+.loading{
+  max-width: 100%;
+  display: grid;
+  gap: 30px;
+  padding-left: 20px;
+  justify-items: center;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, 300px);
+}
+#memory{
+  color: chartreuse;
+  font-size: 60px;
+  margin-bottom: 20px;
 }

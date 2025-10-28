@@ -6,7 +6,6 @@ function App() {
   const [curScore, setCurScore] = useState(0);
   const [bestScore,setBestScore]=useState(0);
   const [clickedArr,setClickedArr]= useState([]);
-  const [randArr,setRandArr] = useState([]);
   const [renderArr,setRenderArr] = useState(reArrange());
   
 
@@ -41,40 +40,10 @@ function App() {
     }
     
   }
-  /*
-  function renderCard(index){
-    return <Card url={ urlIdObj[index]} onClick={ ()=>{
-      handleClick(urlIdObj[index]),
-      setRenderArr(reArrange())
-    
-    }}></Card>
-  }
-  function makeCards(indexes){
-   let storage=[];
-   for (let i = 0; i < indexes.length; i++) {
-     storage.push(renderCard(indexes[i]));
-   }
-   return storage
-  }
-  function renderinCards(storage){
-    setRandArr(storage);
-  }
-  /*
-  function renderCards(){
-   let indexes= reArrange();
-   let storage=[];
-   for (let i = 0; i < indexes.length; i++) {
-     storage.push(renderCard(indexes[i]));
-   }
-   return (
-    <>
-    {...storage}
-    </>
-   )
-  }*/
   return (                                
     <>
-    <h1> Current score{curScore}</h1>
+    <h1 id='memory'>Memory Game</h1>
+    <h1> Current score {curScore}</h1>
     <h2>Best score {bestScore}</h2>
     <div className="loading">
 
